@@ -1,0 +1,56 @@
+\input{page_design}
+
+\begin{document}
+\titel{Java Basics}
+\aufgabe{Taschenrechner}
+Determine the largest k such that the table is k-anonym. Explain which rows contradict the (k+1)-
+anonymity. The dataset is 2-anonymous, as there is no Quasi-Identi fi er-tuple which occurs only once.
+It is not 3-anonymous, as e.g. (F; 24; 10000) occurs only twice.
+2. You may now use suppression on the columns. Assume that by removing one digit from Age or Zip,
+or suppressing the Sex att ribute, you lose one ”value”. What is the minimal value loss required to
+achieve 5-anonymity?
+5-anonymity can be achieved by suppressing the last digit of Age and the last digit of Zip. Hence,
+the minimal value is at most 2. It is not 1 as:
+Suppressing Sex leads to 2-anonymity, e.g. ( ; 24; 10000) occurs only twice.
+Suppressing the last digit of Age leads to 2-anonymity, e.g. (F; 2 ; 10001) occurs only twice.
+Suppressing the fi rst digit does not give any benefi t, as all age numbers begin with ”2”.
+Suppressing the last digit of Zip leads to 2-anonymity, e.g. (F; 24; 1000 ) occurs only twice.
+Suppressing any other digit does not give any benefi t, as all zip codes begin with ”1000”.
+\aufgabe{Taschenrechner Informatik}
+Disti nct l-Diversity
+1. What is one shortcoming of k-anonymity compared to l-diversity? Which att ack exploits this weakness?
+k-anonymity only regards the quasi-identi fi ers, but does not investi gate the distributi on of the sensiti ve
+att ribute within one equivalence-class w.r.t. the quasi-identi fi er. This can be exploited by the
+Background-Knowledge Att ack.
+2. Given that a dataset is k-anonymous, but not (k +1)-anonymous. What implicati ons does this have
+on the disti nct l-diversity of the dataset? Give a lower and upper bound for l.
+The smallest equivalence-class w.r.t. to the Quasi-Identi fi er has size k. Hence, in this class there
+can only be at most k diff erent values for the sensiti ve att ribute. Thus, l can be bounded from above
+as l k. Trivially, 1 l holds as lower bound. As k-anonymity does not make any statement
+about the distributi on of the sensiti ve att ribute, we cannot guarantee a larger lower bound, i.e. the
+following bounds are ti ght: 1 l k.
+3. Knowing only the distributi on of the sensiti ve att ribute values; What bounds can you derive for l in
+disti nct l-diversity?
+Let L be the number of diff erent sensiti ve att ribute values. Then, there can also be at most L diff erent
+values within each equivalence class w.r.t. to an Quasi-Identi fi er. Thus, l L.
+Additi onal informati on: This bound is independent of the bound from (ii), as the former one operates
+only on the Quasi-Identi fi er columns and this one solely considers the sensiti ve att ribute.
+Disti nct l-Diversity
+1. What is one shortcoming of k-anonymity compared to l-diversity? Which att ack exploits this weakness?
+k-anonymity only regards the quasi-identi fi ers, but does not investi gate the distributi on of the sensiti ve
+att ribute within one equivalence-class w.r.t. the quasi-identi fi er. This can be exploited by the
+Background-Knowledge Att ack.
+2. Given that a dataset is k-anonymous, but not (k +1)-anonymous. What implicati ons does this have
+on the disti nct l-diversity of the dataset? Give a lower and upper bound for l.
+The smallest equivalence-class w.r.t. to the Quasi-Identi fi er has size k. Hence, in this class there
+can only be at most k diff erent values for the sensiti ve att ribute. Thus, l can be bounded from above
+as l k. Trivially, 1 l holds as lower bound. As k-anonymity does not make any statement
+about the distributi on of the sensiti ve att ribute, we cannot guarantee a larger lower bound, i.e. the
+following bounds are ti ght: 1 l k.
+3. Knowing only the distributi on of the sensiti ve att ribute values; What bounds can you derive for l in
+disti nct l-diversity?
+Let L be the number of diff erent sensiti ve att ribute values. Then, there can also be at most L diff erent
+values within each equivalence class w.r.t. to an Quasi-Identi fi er. Thus, l L.
+Additi onal informati on: This bound is independent of the bound from (ii), as the former one operates
+only on the Quasi-Identi fi er columns and this one solely considers the sensiti ve att ribute.
+\end{document}

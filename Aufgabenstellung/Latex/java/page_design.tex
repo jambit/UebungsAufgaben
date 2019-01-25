@@ -1,0 +1,64 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[a4paper,includeheadfoot,margin=2.14cm,footskip=40pt,bottom=0.7cm]{geometry}
+% ------------------------- packages ------------------------------------------
+% encoding and language
+\usepackage[utf8]{inputenc}
+\usepackage[english,ngerman]{babel}
+
+% Design
+\usepackage{graphicx}
+\usepackage{background}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+
+\usepackage[ddmmyyyy]{datetime}
+\renewcommand{\dateseparator}{.}
+
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+
+% code
+\usepackage{listings}
+
+\graphicspath{{../graphics/}}
+
+\backgroundsetup{scale = 1, angle = 0, opacity = 1,
+   contents = {\includegraphics[width = \paperwidth,
+   height = \paperheight, keepaspectratio, page=1]
+   {jambit_watermark.pdf}}}
+
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+% remove header
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead{}
+% style footer
+\fancyfoot[L]{\today}
+\fancyfoot[C]{\uppercase{Azubi Übungsaufgabe}}
+\fancyfoot[R]{\thepage/\pageref{LastPage}}
+\fancyfootoffset[L]{25pt}
+\fancyfootoffset[R]{25pt}
+
+\definecolor{orange}{HTML}{f07f3c}
+\definecolor{grau}{HTML}{58585a}
+
+\newcounter{aufgaben}
+\setcounter{aufgaben}{0}
+
+\setlength\parindent{0pt}
+
+\newcommand{\titel}[1]{
+  {
+  \color{orange}\LARGE\textsf{\textbf{#1}}\\
+  \vspace{-0.8cm}\rule{\textwidth}{1pt}
+  }
+}
+
+\newcommand{\aufgabe}[1]{
+  {
+  \addtocounter{aufgaben}{1}
+  \vspace{0.5cm}\\
+  \large\color{grau}\textbf{\arabic{aufgaben}) #1}
+  \vspace{0.2cm}\\
+  }
+}
