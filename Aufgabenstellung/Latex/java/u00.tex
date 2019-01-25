@@ -37,20 +37,14 @@ Additi onal informati on: This bound is independent of the bound from (ii), as t
 only on the Quasi-Identi fi er columns and this one solely considers the sensiti ve att ribute.
 Disti nct l-Diversity
 1. What is one shortcoming of k-anonymity compared to l-diversity? Which att ack exploits this weakness?
-k-anonymity only regards the quasi-identi fi ers, but does not investi gate the distributi on of the sensiti ve
-att ribute within one equivalence-class w.r.t. the quasi-identi fi er. This can be exploited by the
-Background-Knowledge Att ack.
-2. Given that a dataset is k-anonymous, but not (k +1)-anonymous. What implicati ons does this have
-on the disti nct l-diversity of the dataset? Give a lower and upper bound for l.
-The smallest equivalence-class w.r.t. to the Quasi-Identi fi er has size k. Hence, in this class there
-can only be at most k diff erent values for the sensiti ve att ribute. Thus, l can be bounded from above
-as l k. Trivially, 1 l holds as lower bound. As k-anonymity does not make any statement
-about the distributi on of the sensiti ve att ribute, we cannot guarantee a larger lower bound, i.e. the
-following bounds are ti ght: 1 l k.
-3. Knowing only the distributi on of the sensiti ve att ribute values; What bounds can you derive for l in
-disti nct l-diversity?
-Let L be the number of diff erent sensiti ve att ribute values. Then, there can also be at most L diff erent
-values within each equivalence class w.r.t. to an Quasi-Identi fi er. Thus, l L.
-Additi onal informati on: This bound is independent of the bound from (ii), as the former one operates
-only on the Quasi-Identi fi er columns and this one solely considers the sensiti ve att ribute.
+\begin{codeblock}
+public class Forloop {
+  public static void main(String[] args) {
+    int factorial = 1;
+    for (int count=1; count < 11; count++) {
+       System.out.println(factorial *= count);
+    }
+  }
+}
+\end{codeblock}
 \end{document}

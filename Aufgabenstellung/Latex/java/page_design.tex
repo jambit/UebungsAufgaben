@@ -10,6 +10,7 @@
 \usepackage{background}
 \usepackage{fancyhdr}
 \usepackage{lastpage}
+\usepackage{listings}
 
 \usepackage[ddmmyyyy]{datetime}
 \renewcommand{\dateseparator}{.}
@@ -41,6 +42,8 @@
 
 \definecolor{orange}{HTML}{f07f3c}
 \definecolor{grau}{HTML}{58585a}
+\definecolor{gelb}{HTML}{ffc66d}
+\definecolor{codeGreen}{rgb}{0,0.8,0.3}
 
 \newcounter{aufgaben}
 \setcounter{aufgaben}{0}
@@ -61,4 +64,30 @@
   \large\color{grau}\textbf{\arabic{aufgaben}) #1}
   \vspace{0.2cm}\\
   }
+}
+
+% code snippets
+% https://en.wikibooks.org/wiki/LaTeX/Source_Code_Listings
+
+\lstnewenvironment{codeblock}
+{}
+{}
+
+\lstset{
+basicstyle=\footnotesize\sffamily\color{black},
+commentstyle=\color{codeGreen},
+frame=single,
+numbers=left,
+numbersep=5pt,
+numberstyle=\tiny\color{grau},
+keywordstyle=\color{orange},
+identifierstyle=\color{black},
+showspaces=false,
+showstringspaces=false,
+stringstyle=\color{orange},
+tabsize=2,
+language=java,
+captionpos=b,
+aboveskip=\baselineskip,
+morekeywords={*,String}
 }
