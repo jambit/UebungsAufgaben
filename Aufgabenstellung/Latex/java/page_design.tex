@@ -3,7 +3,11 @@
 % ------------------------- packages ------------------------------------------
 % encoding and language
 \usepackage[utf8]{inputenc}
-\usepackage[english,ngerman]{babel}
+\usepackage[ngerman]{babel}
+\usepackage{placeins}
+
+% additional Packages
+\usepackage{amsmath,amssymb,latexsym}
 
 % Design
 \usepackage{graphicx}
@@ -45,24 +49,30 @@
 \definecolor{gelb}{HTML}{ffc66d}
 \definecolor{codeGreen}{rgb}{0,0.8,0.3}
 
-\newcounter{aufgaben}
-\setcounter{aufgaben}{0}
-
 \setlength\parindent{0pt}
 
 \newcommand{\titel}[1]{
   {
-  \color{orange}\LARGE\textsf{\textbf{#1}}\\
-  \vspace{-0.8cm}\rule{\textwidth}{1pt}
+  \color{orange}\LARGE\textsf{\textbf{#1}}
+  \par
+  \vspace{-0.6cm}\rule{\textwidth}{1pt}
+  \par
   }
 }
 
 \newcommand{\aufgabe}[1]{
   {
-  \addtocounter{aufgaben}{1}
-  \vspace{0.5cm}\\
-  \large\color{grau}\textbf{\arabic{aufgaben}) #1}
-  \vspace{0.2cm}\\
+  \vspace{-0.5cm}
+  \large\color{grau}\textbf{\section{#1}}
+  \vspace{-0.3cm}
+  }
+}
+
+\newcommand{\unteraufgabe}[1]{
+  {
+  \vspace{0.2cm}
+  \normalsize\color{grau}\textbf{\subsection{#1}}
+  \vspace{-0.3cm}
   }
 }
 
