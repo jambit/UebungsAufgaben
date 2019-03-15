@@ -48,6 +48,10 @@ public class Calculator {
                 return add(op_1, op_2);
             case "-":
                 return subtract(op_1, op_2);
+            case "*":
+                return multipy(op_1, op_2);
+            case "/":
+                return devide(op_1, op_2);
             default:
                 throw new OperationNotSupportedException("Operator " + operator + " not yet implemented");
         }
@@ -59,5 +63,16 @@ public class Calculator {
 
     private float subtract(float op1, float op2) {
         return op1 - op2;
+    }
+
+    private float multipy(float op1, float op2){
+        return op1 * op2;
+    }
+
+    private float devide(float op1, float op2){
+        if(op2 == 0) {
+            throw new IllegalArgumentException("devide with zero is not valid!");
+        }
+        return op1 / op2;
     }
 }
